@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro:Photo Editor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left"></div>
+    <div class="topbar-right">
+      <span class="app-name">Pro:Photo Editor</span>
+    </div>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <div class="controls">
+        <!-- control sliders -->
+        <div class="control" data-filter="brightness">
+          <span class="material-icons">brightness_6</span>
+          <input type="range" min="0" max="200" value="100" />
+        </div>
+        <div class="control" data-filter="contrast">
+          <span class="material-icons">contrast</span>
+          <input type="range" min="0" max="200" value="100" />
+        </div>
+        <div class="control" data-filter="saturate">
+          <span class="material-icons">color_lens</span>
+          <input type="range" min="0" max="200" value="100" />
+        </div>
+        <div class="control" data-filter="grayscale">
+          <span class="material-icons">grain</span>
+          <input type="range" min="0" max="100" value="0" />
+        </div>
+        <div class="control" data-filter="sepia">
+          <span class="material-icons">filter_vintage</span>
+          <input type="range" min="0" max="100" value="0" />
+        </div>
+        <div class="control" data-filter="invert">
+          <span class="material-icons">invert_colors</span>
+          <input type="range" min="0" max="100" value="0" />
+        </div>
+        <div class="control" data-filter="blur">
+          <span class="material-icons">blur_on</span>
+          <input type="range" min="0" max="10" value="0" step="0.1" />
+        </div>
+        <div class="control" data-filter="hue-rotate">
+          <span class="material-icons">palette</span>
+          <input type="range" min="0" max="360" value="0" />
+        </div>
+        <button id="export">
+          <span class="material-icons">save_alt</span>
+          Export
+        </button>
+        <button id="clear">
+          <span class="material-icons">restart_alt</span>
+          Clear
+        </button>
+      </div>
+    </div>
+    <div class="main">
+      <div id="upload-container">
+        <div id="drop-zone">
+          <span class="material-icons">add_photo_alternate</span>
+          <p>choose image from folder</p>
+          <input type="file" id="upload" accept="image/*" />
+        </div>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="material-icons footer-icon">copyright</span>
+    <span class="footer-text">2025 DoomsdayV5</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
